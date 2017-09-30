@@ -11,25 +11,21 @@ import SwiftyJSON
 import SwiftyJSONModel
 
 extension Route {
-    struct Grade {
-        enum ParsingError: Error {
-            case invalidGrade
-        }
-        
-        enum Letter: Character {
+    public struct Grade {
+        public enum Letter: Character {
             case a = "A", b = "B", c = "C"
         }
         
-        enum Number: Int {
+        public enum Number: Int {
             case one = 1, two, thee, four
             case five, six, seven, eight, nine
         }
         
-        let number: Number
-        let letter: Letter
-        let isPlus: Bool
+        public let number: Number
+        public let letter: Letter
+        public let isPlus: Bool
         
-        init(_ number: Number, _ letter: Letter, plus: Bool = false) {
+        public init(_ number: Number, _ letter: Letter, plus: Bool = false) {
             self.number = number
             self.letter = letter
             isPlus = plus
@@ -38,7 +34,7 @@ extension Route {
 }
 
 extension Route.Grade: CustomStringConvertible {
-    init?(_ string: String) {
+    public init?(_ string: String) {
         let count = string.characters.count
         let start = string.startIndex
         let letterIndex = string.index(after: start)
@@ -52,22 +48,22 @@ extension Route.Grade: CustomStringConvertible {
         isPlus = count == 3
     }
     
-    var stringValue: String {
+    public var stringValue: String {
         let string = "\(number.rawValue)\(letter.rawValue)"
         return isPlus ? string + "+" : string
     }
     
-    var description: String {
+    public var description: String {
         return stringValue
     }
 }
 
 extension Route.Grade: Comparable {
-    static func == (lhs: Route.Grade, rhs: Route.Grade) -> Bool {
+    public static func == (lhs: Route.Grade, rhs: Route.Grade) -> Bool {
         return lhs.number == rhs.number && lhs.letter == rhs.letter && lhs.isPlus == rhs.isPlus
     }
     
-    static func < (lhs: Route.Grade, rhs: Route.Grade) -> Bool {
+    public static func < (lhs: Route.Grade, rhs: Route.Grade) -> Bool {
         if lhs.number != rhs.number {
             return lhs.number.rawValue < rhs.number.rawValue
         } else if lhs.letter != rhs.letter {
@@ -78,27 +74,27 @@ extension Route.Grade: Comparable {
 }
 
 extension Route.Grade: Codable {
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let string = try decoder.singleValueContainer().decode(String.self)
-        guard let grade = Route.Grade(string) else { throw ParsingError.invalidGrade }
+        guard let grade = Route.Grade(string) else { throw JSONModelError.invalidElement }
         self = grade
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         try container.encode(stringValue)
     }
 }
 
 extension Route.Grade: JSONInitializable, JSONRepresentable {
-    init(json: JSON) throws {
+    public init(json: JSON) throws {
         guard let grade = Route.Grade(try json.value()) else {
             throw JSONModelError.invalidElement
         }
         self = grade
     }
     
-    var jsonValue: JSON {
+    public var jsonValue: JSON {
         return JSON(string: stringValue)
     }
 }

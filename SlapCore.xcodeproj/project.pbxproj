@@ -14,6 +14,9 @@
 		CE62327D1F7E5A8F00FB616D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */; };
 		CE62327E1F7E5AA100FB616D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */; };
 		CE62327F1F7E5AA100FB616D /* SwiftyJSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */; };
+		CE6232841F7F754300FB616D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232821F7E5B2E00FB616D /* Route.swift */; };
+		CE6232851F7F754700FB616D /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232811F7E5B2E00FB616D /* Grade.swift */; };
+		CE6232861F7F754900FB616D /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232831F7E5B2E00FB616D /* Builder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,6 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6232841F7F754300FB616D /* Route.swift in Sources */,
+				CE6232851F7F754700FB616D /* Grade.swift in Sources */,
+				CE6232861F7F754900FB616D /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +432,7 @@
 		CE6232771F7E439700FB616D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7H6SM4X3H7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -444,6 +451,7 @@
 		CE6232781F7E439700FB616D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7H6SM4X3H7;
 				FRAMEWORK_SEARCH_PATHS = (
