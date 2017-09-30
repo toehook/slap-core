@@ -13,6 +13,11 @@ extension Route {
     public struct Builder: Codable {
         let firstName: String
         let lastName: String
+        
+        public init(firstName: String, lastName: String) {
+            self.firstName = firstName
+            self.lastName = lastName
+        }
     }
 }
 

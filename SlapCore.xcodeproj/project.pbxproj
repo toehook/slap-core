@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CE6232691F7E439700FB616D /* SlapCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62325F1F7E439700FB616D /* SlapCore.framework */; };
-		CE62326E1F7E439700FB616D /* SlapCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62326D1F7E439700FB616D /* SlapCoreTests.swift */; };
 		CE6232701F7E439700FB616D /* SlapCore.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6232621F7E439700FB616D /* SlapCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE62327C1F7E5A8F00FB616D /* SwiftyJSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */; };
 		CE62327D1F7E5A8F00FB616D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */; };
@@ -17,6 +16,9 @@
 		CE6232841F7F754300FB616D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232821F7E5B2E00FB616D /* Route.swift */; };
 		CE6232851F7F754700FB616D /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232811F7E5B2E00FB616D /* Grade.swift */; };
 		CE6232861F7F754900FB616D /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232831F7E5B2E00FB616D /* Builder.swift */; };
+		CE62328A1F7F768E00FB616D /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232871F7F768E00FB616D /* RouteTests.swift */; };
+		CE62328B1F7F768E00FB616D /* GradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232881F7F768E00FB616D /* GradeTests.swift */; };
+		CE62328C1F7F768E00FB616D /* BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232891F7F768E00FB616D /* BuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +36,15 @@
 		CE6232621F7E439700FB616D /* SlapCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlapCore.h; sourceTree = "<group>"; };
 		CE6232631F7E439700FB616D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6232681F7E439700FB616D /* SlapCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlapCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE62326D1F7E439700FB616D /* SlapCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapCoreTests.swift; sourceTree = "<group>"; };
 		CE62326F1F7E439700FB616D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSONModel.framework; path = Carthage/Build/iOS/SwiftyJSONModel.framework; sourceTree = "<group>"; };
 		CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		CE6232811F7E5B2E00FB616D /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		CE6232821F7E5B2E00FB616D /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		CE6232831F7E5B2E00FB616D /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		CE6232871F7F768E00FB616D /* RouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTests.swift; sourceTree = "<group>"; };
+		CE6232881F7F768E00FB616D /* GradeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeTests.swift; sourceTree = "<group>"; };
+		CE6232891F7F768E00FB616D /* BuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 		CE62326C1F7E439700FB616D /* SlapCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE62326D1F7E439700FB616D /* SlapCoreTests.swift */,
+				CE6232891F7F768E00FB616D /* BuilderTests.swift */,
+				CE6232881F7F768E00FB616D /* GradeTests.swift */,
+				CE6232871F7F768E00FB616D /* RouteTests.swift */,
 				CE62326F1F7E439700FB616D /* Info.plist */,
 			);
 			path = SlapCoreTests;
@@ -244,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE62326E1F7E439700FB616D /* SlapCoreTests.swift in Sources */,
+				CE62328B1F7F768E00FB616D /* GradeTests.swift in Sources */,
+				CE62328A1F7F768E00FB616D /* RouteTests.swift in Sources */,
+				CE62328C1F7F768E00FB616D /* BuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

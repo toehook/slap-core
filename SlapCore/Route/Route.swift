@@ -24,6 +24,16 @@ public struct Route: Codable {
     public let color: Color
     public let tagsString: String
     
+    public init(id: String, title: String, location: String, initialGrade: Grade, builder: Builder, color: Color, tagsString: String) {
+        self.id = id
+        self.title = title
+        self.location = location
+        self.initialGrade = initialGrade
+        self.builder = builder
+        self.color = color
+        self.tagsString = tagsString
+    }
+    
     public var tags: [String] {
         return tagsString.replacingOccurrences(of: ", ", with: ",").components(separatedBy: ",")
     }
