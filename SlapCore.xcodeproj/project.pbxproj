@@ -8,8 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		CE6232691F7E439700FB616D /* SlapCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62325F1F7E439700FB616D /* SlapCore.framework */; };
-		CE62326E1F7E439700FB616D /* SlapCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62326D1F7E439700FB616D /* SlapCoreTests.swift */; };
 		CE6232701F7E439700FB616D /* SlapCore.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6232621F7E439700FB616D /* SlapCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE62327C1F7E5A8F00FB616D /* SwiftyJSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */; };
+		CE62327D1F7E5A8F00FB616D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */; };
+		CE62327E1F7E5AA100FB616D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */; };
+		CE62327F1F7E5AA100FB616D /* SwiftyJSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */; };
+		CE6232841F7F754300FB616D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232821F7E5B2E00FB616D /* Route.swift */; };
+		CE6232851F7F754700FB616D /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232811F7E5B2E00FB616D /* Grade.swift */; };
+		CE6232861F7F754900FB616D /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232831F7E5B2E00FB616D /* Builder.swift */; };
+		CE62328A1F7F768E00FB616D /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232871F7F768E00FB616D /* RouteTests.swift */; };
+		CE62328B1F7F768E00FB616D /* GradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232881F7F768E00FB616D /* GradeTests.swift */; };
+		CE62328C1F7F768E00FB616D /* BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232891F7F768E00FB616D /* BuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +36,15 @@
 		CE6232621F7E439700FB616D /* SlapCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlapCore.h; sourceTree = "<group>"; };
 		CE6232631F7E439700FB616D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6232681F7E439700FB616D /* SlapCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlapCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE62326D1F7E439700FB616D /* SlapCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapCoreTests.swift; sourceTree = "<group>"; };
 		CE62326F1F7E439700FB616D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSONModel.framework; path = Carthage/Build/iOS/SwiftyJSONModel.framework; sourceTree = "<group>"; };
+		CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		CE6232811F7E5B2E00FB616D /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
+		CE6232821F7E5B2E00FB616D /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		CE6232831F7E5B2E00FB616D /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		CE6232871F7F768E00FB616D /* RouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTests.swift; sourceTree = "<group>"; };
+		CE6232881F7F768E00FB616D /* GradeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeTests.swift; sourceTree = "<group>"; };
+		CE6232891F7F768E00FB616D /* BuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE62327C1F7E5A8F00FB616D /* SwiftyJSONModel.framework in Frameworks */,
+				CE62327D1F7E5A8F00FB616D /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +62,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6232691F7E439700FB616D /* SlapCore.framework in Frameworks */,
+				CE62327E1F7E5AA100FB616D /* SwiftyJSON.framework in Frameworks */,
+				CE62327F1F7E5AA100FB616D /* SwiftyJSONModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +76,7 @@
 				CE6232611F7E439700FB616D /* SlapCore */,
 				CE62326C1F7E439700FB616D /* SlapCoreTests */,
 				CE6232601F7E439700FB616D /* Products */,
+				CE6232791F7E5A8E00FB616D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6232621F7E439700FB616D /* SlapCore.h */,
+				CE6232801F7E5B1A00FB616D /* Route */,
 				CE6232631F7E439700FB616D /* Info.plist */,
 			);
 			path = SlapCore;
@@ -80,10 +102,31 @@
 		CE62326C1F7E439700FB616D /* SlapCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE62326D1F7E439700FB616D /* SlapCoreTests.swift */,
+				CE6232891F7F768E00FB616D /* BuilderTests.swift */,
+				CE6232881F7F768E00FB616D /* GradeTests.swift */,
+				CE6232871F7F768E00FB616D /* RouteTests.swift */,
 				CE62326F1F7E439700FB616D /* Info.plist */,
 			);
 			path = SlapCoreTests;
+			sourceTree = "<group>";
+		};
+		CE6232791F7E5A8E00FB616D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */,
+				CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE6232801F7E5B1A00FB616D /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				CE6232821F7E5B2E00FB616D /* Route.swift */,
+				CE6232811F7E5B2E00FB616D /* Grade.swift */,
+				CE6232831F7E5B2E00FB616D /* Builder.swift */,
+			);
+			path = Route;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +191,7 @@
 				TargetAttributes = {
 					CE62325E1F7E439700FB616D = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					CE6232671F7E439700FB616D = {
@@ -196,6 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6232841F7F754300FB616D /* Route.swift in Sources */,
+				CE6232851F7F754700FB616D /* Grade.swift in Sources */,
+				CE6232861F7F754900FB616D /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE62326E1F7E439700FB616D /* SlapCoreTests.swift in Sources */,
+				CE62328B1F7F768E00FB616D /* GradeTests.swift in Sources */,
+				CE62328A1F7F768E00FB616D /* RouteTests.swift in Sources */,
+				CE62328C1F7F768E00FB616D /* BuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -342,6 +392,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SlapCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -349,6 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.toehook.SlapCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -365,6 +421,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SlapCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -380,10 +440,15 @@
 		CE6232771F7E439700FB616D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7H6SM4X3H7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SlapCoreTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toehook.SlapCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -394,10 +459,15 @@
 		CE6232781F7E439700FB616D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7H6SM4X3H7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SlapCoreTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toehook.SlapCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
