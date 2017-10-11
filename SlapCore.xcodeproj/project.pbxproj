@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3CA1771F8E71C400D01CAC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CA1761F8E71C400D01CAC /* DateExtension.swift */; };
+		CE3CA1791F8E720800D01CAC /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CA1781F8E720800D01CAC /* DateTests.swift */; };
 		CE6232691F7E439700FB616D /* SlapCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62325F1F7E439700FB616D /* SlapCore.framework */; };
 		CE6232701F7E439700FB616D /* SlapCore.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6232621F7E439700FB616D /* SlapCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE62327C1F7E5A8F00FB616D /* SwiftyJSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE3CA1761F8E71C400D01CAC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		CE3CA1781F8E720800D01CAC /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		CE62325F1F7E439700FB616D /* SlapCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlapCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6232621F7E439700FB616D /* SlapCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlapCore.h; sourceTree = "<group>"; };
 		CE6232631F7E439700FB616D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE3CA1751F8E71B000D01CAC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE3CA1761F8E71C400D01CAC /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CE6232551F7E439700FB616D = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +106,7 @@
 			children = (
 				CE6232621F7E439700FB616D /* SlapCore.h */,
 				CE6232801F7E5B1A00FB616D /* Route */,
+				CE3CA1751F8E71B000D01CAC /* Extensions */,
 				CE6232631F7E439700FB616D /* Info.plist */,
 			);
 			path = SlapCore;
@@ -105,6 +118,7 @@
 				CE6232891F7F768E00FB616D /* BuilderTests.swift */,
 				CE6232881F7F768E00FB616D /* GradeTests.swift */,
 				CE6232871F7F768E00FB616D /* RouteTests.swift */,
+				CE3CA1781F8E720800D01CAC /* DateTests.swift */,
 				CE62326F1F7E439700FB616D /* Info.plist */,
 			);
 			path = SlapCoreTests;
@@ -241,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6232841F7F754300FB616D /* Route.swift in Sources */,
+				CE3CA1771F8E71C400D01CAC /* DateExtension.swift in Sources */,
 				CE6232851F7F754700FB616D /* Grade.swift in Sources */,
 				CE6232861F7F754900FB616D /* Builder.swift in Sources */,
 			);
@@ -253,6 +268,7 @@
 				CE62328B1F7F768E00FB616D /* GradeTests.swift in Sources */,
 				CE62328A1F7F768E00FB616D /* RouteTests.swift in Sources */,
 				CE62328C1F7F768E00FB616D /* BuilderTests.swift in Sources */,
+				CE3CA1791F8E720800D01CAC /* DateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
