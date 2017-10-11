@@ -23,8 +23,9 @@ public struct Route: Codable {
     public let builder: Builder
     public let color: Color
     public let tagsString: String
+    public let createdAt: Date
     
-    public init(id: String, title: String, location: String, initialGrade: Grade, builder: Builder, color: Color, tagsString: String) {
+    public init(id: String, title: String, location: String, initialGrade: Grade, builder: Builder, color: Color, tagsString: String, createdAt: Date = Date()) {
         self.id = id
         self.title = title
         self.location = location
@@ -32,6 +33,7 @@ public struct Route: Codable {
         self.builder = builder
         self.color = color
         self.tagsString = tagsString
+        self.createdAt = createdAt
     }
     
     public var tags: [String] {
@@ -49,6 +51,7 @@ extension Route: Equatable {
             && lhs.initialGrade == rhs.initialGrade
             && lhs.color == rhs.color
             && lhs.tagsString == rhs.tagsString
+            && lhs.createdAt == rhs.createdAt
     }
 }
 
@@ -57,6 +60,7 @@ extension Route: JSONModelType {
         case id
         case title, location, tags, builder
         case initialGrade, color
+        case createdAt
     }
     
     public init(object: JSONObject<PropertyKey>) throws {
@@ -67,13 +71,15 @@ extension Route: JSONModelType {
         builder = try object.value(for: .builder)
         initialGrade = try object.value(for: .initialGrade)
         color = try object.value(for: .color)
+        createdAt = try object.value(for: .createdAt)
     }
     
     public var dictValue: [PropertyKey : JSONRepresentable?] {
         return [
             .id: id, .title: title, .location: location,
             .builder: builder, .initialGrade: initialGrade,
-            .color: color, .tags: tagsString
+            .color: color, .tags: tagsString,
+            .createdAt: createdAt
         ]
     }
 }
