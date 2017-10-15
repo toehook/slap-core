@@ -16,24 +16,34 @@ public struct Route: Codable {
         case black, white
     }
     
-    public let id: String
-    public let title: String
-    public let location: String
+    public let id: String?
+    public let number: Int
     public let initialGrade: Grade
     public let builder: Builder
     public let color: Color
     public let tagsString: String
     public let createdAt: Date
     
-    public init(id: String, title: String, location: String, initialGrade: Grade, builder: Builder, color: Color, tagsString: String, createdAt: Date = Date()) {
+    public init(id: String? = nil, number: Int, initialGrade: Grade, builder: Builder, color: Color, tagsString: String, createdAt: Date = Date()) {
         self.id = id
-        self.title = title
-        self.location = location
+        self.number = number
         self.initialGrade = initialGrade
         self.builder = builder
         self.color = color
         self.tagsString = tagsString
         self.createdAt = createdAt
+    }
+    
+    public func with(id: String) -> Route {
+        return Route(
+            id: id,
+            number: number,
+            initialGrade: initialGrade,
+            builder: builder,
+            color: color,
+            tagsString: tagsString,
+            createdAt: createdAt
+        )
     }
     
     public var tags: [String] {
@@ -44,9 +54,7 @@ public struct Route: Codable {
 extension Route: Equatable {
     public static func == (lhs: Route, rhs: Route) -> Bool {
         return lhs.id == rhs.id
-            && lhs.title == rhs.title
-            && lhs.location == rhs.location
-            && lhs.location == rhs.location
+            && lhs.number == rhs.number
             && lhs.builder == rhs.builder
             && lhs.initialGrade == rhs.initialGrade
             && lhs.color == rhs.color
@@ -57,16 +65,14 @@ extension Route: Equatable {
 
 extension Route: JSONModelType {
     public enum PropertyKey: String {
-        case id
-        case title, location, tags, builder
+        case tags, builder, number
         case initialGrade, color
         case createdAt
     }
     
     public init(object: JSONObject<PropertyKey>) throws {
-        id = try object.value(for: .id)
-        title = try object.value(for: .title)
-        location = try object.value(for: .location)
+        id = nil
+        number = try object.value(for: .number)
         tagsString = try object.value(for: .tags)
         builder = try object.value(for: .builder)
         initialGrade = try object.value(for: .initialGrade)
@@ -76,8 +82,9 @@ extension Route: JSONModelType {
     
     public var dictValue: [PropertyKey : JSONRepresentable?] {
         return [
-            .id: id, .title: title, .location: location,
-            .builder: builder, .initialGrade: initialGrade,
+            .number: number,
+            .builder: builder,
+            .initialGrade: initialGrade,
             .color: color, .tags: tagsString,
             .createdAt: createdAt
         ]
