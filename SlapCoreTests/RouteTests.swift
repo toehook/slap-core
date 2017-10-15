@@ -18,8 +18,9 @@ class RouteTests: XCTestCase {
         let grade = Route.Grade("7A+")!
         let createdAt = try! Date(json: "2017-10-11T15:37:19.000Z")
         let builder = Route.Builder(firstName: "John", lastName: "Doe")
-        let route = Route(id: nil, initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool", createdAt: createdAt)
+        let route = Route(id: nil, number: 5, initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool", createdAt: createdAt)
         let routeJSON: JSON = [
+            "number": 5,
             "initialGrade": "7A+",
             "builder": [
                 "firstName": "John",
@@ -30,17 +31,17 @@ class RouteTests: XCTestCase {
             "createdAt": "2017-10-11T15:37:19.000Z"
         ]
         
-        XCTAssertEqual(route.with(id: id), Route(id: id, initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool", createdAt: createdAt))
+        XCTAssertEqual(route.with(id: id), Route(id: id, number: 5, initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool", createdAt: createdAt))
         XCTAssertEqual(try? Route(json: routeJSON), route)
         XCTAssertEqual(route.jsonValue, routeJSON)
-        XCTAssertNotEqual(route, Route(id: id, initialGrade: grade, builder: builder, color: .green, tagsString: "slap, cool"))
+        XCTAssertNotEqual(route, Route(id: id, number: 6, initialGrade: grade, builder: builder, color: .green, tagsString: "slap, cool"))
     }
     
     func testRouteTags() {
         let grade = Route.Grade("7A+")!
         let builder = Route.Builder(firstName: "John", lastName: "Doe")
-        let routeOne = Route(id: id, initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool")
-        let routTwo = Route(id: id, initialGrade: grade, builder: builder, color: .red, tagsString: "yo, wow,great")
+        let routeOne = Route(id: id, number: 5, initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool")
+        let routTwo = Route(id: id, number: 5, initialGrade: grade, builder: builder, color: .red, tagsString: "yo, wow,great")
         
         XCTAssertEqual(routeOne.tags, ["slap", "cool"])
         XCTAssertEqual(routTwo.tags, ["yo", "wow", "great"])
