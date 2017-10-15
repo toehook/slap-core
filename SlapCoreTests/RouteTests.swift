@@ -18,9 +18,8 @@ class RouteTests: XCTestCase {
         let grade = Route.Grade("7A+")!
         let createdAt = try! Date(json: "2017-10-11T15:37:19.000Z")
         let builder = Route.Builder(firstName: "John", lastName: "Doe")
-        let route = Route(id: id, title: "slap", location: "corner", initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool", createdAt: createdAt)
+        let route = Route(id: nil, title: "slap", location: "corner", initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool", createdAt: createdAt)
         let routeJSON: JSON = [
-            "id": id,
             "title": "slap",
             "location": "corner",
             "initialGrade": "7A+",
@@ -33,7 +32,7 @@ class RouteTests: XCTestCase {
             "createdAt": "2017-10-11T15:37:19.000Z"
         ]
         
-        XCTAssertEqual(route, Route(id: id, title: "slap", location: "corner", initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool", createdAt: createdAt))
+        XCTAssertEqual(route.with(id: id), Route(id: id, title: "slap", location: "corner", initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool", createdAt: createdAt))
         XCTAssertEqual(try? Route(json: routeJSON), route)
         XCTAssertEqual(route.jsonValue, routeJSON)
         XCTAssertNotEqual(route, Route(id: id, title: "slap", location: "corner", initialGrade: grade, builder: builder, color: .green, tagsString: "slap, cool"))
