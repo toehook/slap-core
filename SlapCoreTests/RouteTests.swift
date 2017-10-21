@@ -27,7 +27,7 @@ class RouteTests: XCTestCase {
                 "lastName": "Doe"
             ],
             "color": "red",
-            "tags": "slap, cool",
+            "tagsString": "slap, cool",
             "createdAt": "2017-10-11T15:37:19.000Z"
         ]
         

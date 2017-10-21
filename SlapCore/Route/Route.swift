@@ -65,7 +65,7 @@ extension Route: Equatable {
 
 extension Route: JSONModelType {
     public enum PropertyKey: String {
-        case tags, builder, number
+        case tagsString, builder, number
         case initialGrade, color
         case createdAt
     }
@@ -73,7 +73,7 @@ extension Route: JSONModelType {
     public init(object: JSONObject<PropertyKey>) throws {
         id = nil
         number = try object.value(for: .number)
-        tagsString = try object.value(for: .tags)
+        tagsString = try object.value(for: .tagsString)
         builder = try object.value(for: .builder)
         initialGrade = try object.value(for: .initialGrade)
         color = try object.value(for: .color)
@@ -85,7 +85,7 @@ extension Route: JSONModelType {
             .number: number,
             .builder: builder,
             .initialGrade: initialGrade,
-            .color: color, .tags: tagsString,
+            .color: color, .tagsString: tagsString,
             .createdAt: createdAt
         ]
     }
