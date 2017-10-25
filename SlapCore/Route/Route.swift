@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import SwiftyJSONModel
 
 public struct Route: Codable {
-    public enum Color: String, Codable, JSONString {
+    public enum Color: String, Codable {
         case red, green, blue, orange
         case yellow, purple
         case black, white

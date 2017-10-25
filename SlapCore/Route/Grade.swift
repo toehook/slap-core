@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
-import SwiftyJSONModel
 
 extension Route {
     public struct Grade {
@@ -75,8 +73,9 @@ extension Route.Grade: Comparable {
 
 extension Route.Grade: Codable {
     public init(from decoder: Decoder) throws {
-        let string = try decoder.singleValueContainer().decode(String.self)
-        guard let grade = Route.Grade(string) else { throw JSONModelError.invalidElement }
+        let container = try decoder.singleValueContainer()
+        let string = try container.decode(String.self)
+        guard let grade = Route.Grade(string) else { throw DecodingError.dataCorruptedError(in: container, debugDescription: "Invalid grade string") }
         self = grade
     }
     

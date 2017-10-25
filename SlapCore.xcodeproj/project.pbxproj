@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		CE6232691F7E439700FB616D /* SlapCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62325F1F7E439700FB616D /* SlapCore.framework */; };
 		CE6232701F7E439700FB616D /* SlapCore.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6232621F7E439700FB616D /* SlapCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE62327C1F7E5A8F00FB616D /* SwiftyJSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */; };
-		CE62327D1F7E5A8F00FB616D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */; };
-		CE62327E1F7E5AA100FB616D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */; };
-		CE62327F1F7E5AA100FB616D /* SwiftyJSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */; };
 		CE6232841F7F754300FB616D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232821F7E5B2E00FB616D /* Route.swift */; };
 		CE6232851F7F754700FB616D /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232811F7E5B2E00FB616D /* Grade.swift */; };
 		CE6232861F7F754900FB616D /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232831F7E5B2E00FB616D /* Builder.swift */; };
@@ -37,8 +33,6 @@
 		CE6232631F7E439700FB616D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6232681F7E439700FB616D /* SlapCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlapCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE62326F1F7E439700FB616D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSONModel.framework; path = Carthage/Build/iOS/SwiftyJSONModel.framework; sourceTree = "<group>"; };
-		CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		CE6232811F7E5B2E00FB616D /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		CE6232821F7E5B2E00FB616D /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		CE6232831F7E5B2E00FB616D /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -52,8 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE62327C1F7E5A8F00FB616D /* SwiftyJSONModel.framework in Frameworks */,
-				CE62327D1F7E5A8F00FB616D /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +54,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6232691F7E439700FB616D /* SlapCore.framework in Frameworks */,
-				CE62327E1F7E5AA100FB616D /* SwiftyJSON.framework in Frameworks */,
-				CE62327F1F7E5AA100FB616D /* SwiftyJSONModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +66,6 @@
 				CE6232611F7E439700FB616D /* SlapCore */,
 				CE62326C1F7E439700FB616D /* SlapCoreTests */,
 				CE6232601F7E439700FB616D /* Products */,
-				CE6232791F7E5A8E00FB616D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,15 +97,6 @@
 				CE62326F1F7E439700FB616D /* Info.plist */,
 			);
 			path = SlapCoreTests;
-			sourceTree = "<group>";
-		};
-		CE6232791F7E5A8E00FB616D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CE62327B1F7E5A8E00FB616D /* SwiftyJSON.framework */,
-				CE62327A1F7E5A8E00FB616D /* SwiftyJSONModel.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CE6232801F7E5B1A00FB616D /* Route */ = {
@@ -392,10 +372,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SlapCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -421,10 +398,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SlapCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

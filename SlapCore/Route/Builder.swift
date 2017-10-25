@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSONModel
 
 extension Route {
     public struct Builder: Codable {
