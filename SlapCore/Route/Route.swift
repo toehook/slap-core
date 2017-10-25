@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import SwiftyJSONModel
 
 public struct Route: Codable {
-    public enum Color: String, Codable, JSONString {
+    public enum Color: String, Codable {
         case red, green, blue, orange
         case yellow, purple
         case black, white
@@ -60,33 +59,5 @@ extension Route: Equatable {
             && lhs.color == rhs.color
             && lhs.tagsString == rhs.tagsString
             && lhs.createdAt == rhs.createdAt
-    }
-}
-
-extension Route: JSONModelType {
-    public enum PropertyKey: String {
-        case tagsString, builder, number
-        case initialGrade, color
-        case createdAt
-    }
-    
-    public init(object: JSONObject<PropertyKey>) throws {
-        id = nil
-        number = try object.value(for: .number)
-        tagsString = try object.value(for: .tagsString)
-        builder = try object.value(for: .builder)
-        initialGrade = try object.value(for: .initialGrade)
-        color = try object.value(for: .color)
-        createdAt = try object.value(for: .createdAt)
-    }
-    
-    public var dictValue: [PropertyKey : JSONRepresentable?] {
-        return [
-            .number: number,
-            .builder: builder,
-            .initialGrade: initialGrade,
-            .color: color, .tagsString: tagsString,
-            .createdAt: createdAt
-        ]
     }
 }

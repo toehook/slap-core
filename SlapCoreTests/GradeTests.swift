@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import SwiftyJSON
 import SlapCore
 
 class GradeTests: XCTestCase {
@@ -37,10 +36,6 @@ class GradeTests: XCTestCase {
         XCTAssertEqual([Grade(.six, .b)], try! decoder.decode(Array<Route.Grade>.self, from: data))
         XCTAssertThrowsError(try decoder.decode(Array<Route.Grade>.self, from: "[\"6B++++++\"]".data(using: .utf8)!))
         XCTAssertEqual(try? JSONEncoder().encode([Grade(.six, .b)]), data)
-    }
-    
-    func testGradeJSONValue() {
-        XCTAssertNil(try? Grade(json: "6"))
     }
     
     func testToStringConversion() {

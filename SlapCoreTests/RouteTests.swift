@@ -7,8 +7,6 @@
 //
 
 import XCTest
-import SwiftyJSON
-import SwiftyJSONModel
 import SlapCore
 
 class RouteTests: XCTestCase {
@@ -16,24 +14,11 @@ class RouteTests: XCTestCase {
     
     func testRouteEquatable() {
         let grade = Route.Grade("7A+")!
-        let createdAt = try! Date(json: "2017-10-11T15:37:19.000Z")
+        let createdAt = Date()
         let builder = Route.Builder(firstName: "John", lastName: "Doe")
         let route = Route(id: nil, number: 5, initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool", createdAt: createdAt)
-        let routeJSON: JSON = [
-            "number": 5,
-            "initialGrade": "7A+",
-            "builder": [
-                "firstName": "John",
-                "lastName": "Doe"
-            ],
-            "color": "red",
-            "tagsString": "slap, cool",
-            "createdAt": "2017-10-11T15:37:19.000Z"
-        ]
         
         XCTAssertEqual(route.with(id: id), Route(id: id, number: 5, initialGrade: grade, builder: builder, color: .red, tagsString: "slap, cool", createdAt: createdAt))
-        XCTAssertEqual(try? Route(json: routeJSON), route)
-        XCTAssertEqual(route.jsonValue, routeJSON)
         XCTAssertNotEqual(route, Route(id: id, number: 6, initialGrade: grade, builder: builder, color: .green, tagsString: "slap, cool"))
     }
     
