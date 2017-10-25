@@ -26,18 +26,3 @@ extension Route.Builder: Equatable {
         return lhs.firstName == rhs.firstName && lhs.lastName == rhs.lastName
     }
 }
-
-extension Route.Builder: JSONModelType {
-    public enum PropertyKey: String {
-        case firstName, lastName
-    }
-    
-    public init(object: JSONObject<PropertyKey>) throws {
-        firstName = try object.value(for: .firstName)
-        lastName = try object.value(for: .lastName)
-    }
-    
-    public var dictValue: [PropertyKey : JSONRepresentable?] {
-        return [.firstName: firstName, .lastName: lastName]
-    }
-}

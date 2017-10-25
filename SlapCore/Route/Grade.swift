@@ -85,16 +85,3 @@ extension Route.Grade: Codable {
         try container.encode(stringValue)
     }
 }
-
-extension Route.Grade: JSONInitializable, JSONRepresentable {
-    public init(json: JSON) throws {
-        guard let grade = Route.Grade(try json.value()) else {
-            throw JSONModelError.invalidElement
-        }
-        self = grade
-    }
-    
-    public var jsonValue: JSON {
-        return JSON(string: stringValue)
-    }
-}
