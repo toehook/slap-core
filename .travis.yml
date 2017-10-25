@@ -1,18 +1,8 @@
 language: objective-c
 osx_image: xcode9
 
-cache:
-  directories:
-  - Carthage
-
-before_install:
-  - brew update
-  - brew outdated carthage || brew upgrade carthage
-  - carthage bootstrap --verbose --platform iOS --no-use-binaries --cache-builds
-
 script:
-  - open -a "simulator" --args -CurrentDeviceUDID F60B87EC-8969-41A7-90ED-D0826ECC32DB
-  - xcodebuild clean build test -project SlapCore.xcodeproj -scheme SlapCore -destination 'platform=iOS Simulator,OS=10.3.1,id=F60B87EC-8969-41A7-90ED-D0826ECC32DB'
+  - xcodebuild clean build test -project SlapCore.xcodeproj -scheme SlapCore -destination 'platform=iOS Simulator,name=iPhone 8'
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
