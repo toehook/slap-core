@@ -15,6 +15,8 @@
 		CE62328A1F7F768E00FB616D /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232871F7F768E00FB616D /* RouteTests.swift */; };
 		CE62328B1F7F768E00FB616D /* GradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232881F7F768E00FB616D /* GradeTests.swift */; };
 		CE62328C1F7F768E00FB616D /* BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6232891F7F768E00FB616D /* BuilderTests.swift */; };
+		CEEF16D31FA27F8900F1C932 /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF16D21FA27F8900F1C932 /* Gym.swift */; };
+		CEEF16D51FA2806300F1C932 /* GymTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF16D41FA2806300F1C932 /* GymTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		CE6232871F7F768E00FB616D /* RouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTests.swift; sourceTree = "<group>"; };
 		CE6232881F7F768E00FB616D /* GradeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeTests.swift; sourceTree = "<group>"; };
 		CE6232891F7F768E00FB616D /* BuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderTests.swift; sourceTree = "<group>"; };
+		CEEF16D21FA27F8900F1C932 /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
+		CEEF16D41FA2806300F1C932 /* GymTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 		CE62326C1F7E439700FB616D /* SlapCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				CEEF16D41FA2806300F1C932 /* GymTests.swift */,
 				CE6232891F7F768E00FB616D /* BuilderTests.swift */,
 				CE6232881F7F768E00FB616D /* GradeTests.swift */,
 				CE6232871F7F768E00FB616D /* RouteTests.swift */,
@@ -102,6 +107,7 @@
 		CE6232801F7E5B1A00FB616D /* Route */ = {
 			isa = PBXGroup;
 			children = (
+				CEEF16D21FA27F8900F1C932 /* Gym.swift */,
 				CE6232821F7E5B2E00FB616D /* Route.swift */,
 				CE6232811F7E5B2E00FB616D /* Grade.swift */,
 				CE6232831F7E5B2E00FB616D /* Builder.swift */,
@@ -221,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6232841F7F754300FB616D /* Route.swift in Sources */,
+				CEEF16D31FA27F8900F1C932 /* Gym.swift in Sources */,
 				CE6232851F7F754700FB616D /* Grade.swift in Sources */,
 				CE6232861F7F754900FB616D /* Builder.swift in Sources */,
 			);
@@ -231,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE62328B1F7F768E00FB616D /* GradeTests.swift in Sources */,
+				CEEF16D51FA2806300F1C932 /* GymTests.swift in Sources */,
 				CE62328A1F7F768E00FB616D /* RouteTests.swift in Sources */,
 				CE62328C1F7F768E00FB616D /* BuilderTests.swift in Sources */,
 			);
